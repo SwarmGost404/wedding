@@ -74,7 +74,7 @@ const goInMap = () => {
         <p>* но, если у вас есть очень хорошая идея что подарить, что действительно пригодится в хозяйстве, и у нас этого точно нет</p>
       </div>
       <footer class="m-[100px] my-[10%]">
-          <a class="hover:underline " href="https://t.me/swarmgost">По всем вопросам обращайтесь сюда</a>
+          <a class="hover:underline " href="https://t.me/swarmgost">->По всем вопросам обращайтесь сюда!!!<-</a>
       </footer>
     </main>
 </template>
