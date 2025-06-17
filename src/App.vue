@@ -11,7 +11,7 @@ const goInMap = () => {
 <template>
   <main class="w-[80%] mt-10% ml-[10%] relative top-[55px] ">
       <h1
-        class="text-8xl my-[10%]"
+        class=" my-[10%]"
       >
         Виктор 
         <br />
@@ -83,15 +83,33 @@ const goInMap = () => {
 * {
   font-family: "Caveat", cursive;
 }
-p {
+@media (min-width: 768px) {
+  p {
   font-size: 180%;
-}
-h2 {
-  font-size: 200%;
+  }
+  h2 {
+    font-size: 200%;
 
+  }
+  h3 {
+    font-size: 220%;
+  }
+  h1 {
+    font-size: 6rem;
+  }
 }
-h3 {
-  font-size: 220%;
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 200%;
+  }
+  p,
+  h2,
+  h3,
+  span {
+    font-size: 130%;
+  }
+
 }
 button {
   border: #fff 1px solid;

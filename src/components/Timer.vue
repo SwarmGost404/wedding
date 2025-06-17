@@ -9,7 +9,7 @@ interface TimeLeft {
   seconds: number;
 }
 
-const targetDate = new Date('2025-07-20T12:00:00'); // Нужно создать Date объект
+const targetDate = new Date('2025-07-20T12:00:00')
 
 const timeLeft = ref<TimeLeft>({
   days: 0,
@@ -45,22 +45,22 @@ onMounted(() => {
 <template>
     <div class="flex items-center justify-center gap-4 p-6 ">
       <div class="text-center">
-        <span class="text-4xl font-bold ">{{timeLeft.days + " : "}}</span>
+        <span class=" font-bold ">{{timeLeft.days + " : "}}</span>
         <br />
         дней
       </div>
       <div class="text-center">
-        <span class="text-4xl font-bold ">{{timeLeft.hours + " : "}}</span>
+        <span class=" font-bold ">{{timeLeft.hours + " : "}}</span>
         <br />
         часов
       </div>
       <div class="text-center">
-        <span class="text-4xl font-bold ">{{timeLeft.minutes + " : "}}</span>
+        <span class=" font-bold ">{{timeLeft.minutes + " : "}}</span>
         <br />
         минут
       </div>
       <div class="text-center">
-        <span class="text-4xl font-bold ">{{timeLeft.seconds}}</span>
+        <span class=" font-bold ">{{timeLeft.seconds}}</span>
         <br />
         секунд
       </div>
