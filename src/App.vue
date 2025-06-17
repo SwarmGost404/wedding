@@ -9,7 +9,8 @@ const goInMap = () => {
 </script>
 
 <template>
-  <main class="w-[80%] mt-10% ml-[10%] relative top-[55px] ">
+  <Timer />
+  <main class="w-[80%] mt-10%  ml-[10%] relative top-[155px] sm:top-[55px] ">
       <h1
         class=" my-[10%]"
       >
@@ -62,7 +63,7 @@ const goInMap = () => {
       </div>
       <div class="my-[10%]"> 
         <h2>До нашей встречи</h2>
-        <Timer />
+        
       </div>
       <div class="my-[10%]">
         <h2>
@@ -74,7 +75,7 @@ const goInMap = () => {
         <p>* но, если у вас есть очень хорошая идея что подарить, что действительно пригодится в хозяйстве, и у нас этого точно нет</p>
       </div>
       <footer class="m-[100px] my-[10%]">
-          <a class="hover:underline " href="https://t.me/swarmgost">->По всем вопросам обращайтесь сюда!!!<-</a>
+          <a class="hover:underline " href="https://t.me/swarmgost">->!!! По всем вопросам обращайтесь сюда !!!<-</a>
       </footer>
     </main>
 </template>

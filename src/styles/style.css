@@ -1,15 +1,24 @@
 @import "tailwindcss";
 
 :root {
-
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #222;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #eee;
+  --color-text-primary: #222;
 }
+
+.dark {
+  --color-bg-primary: #222;
+  --color-bg-secondary: #555;
+  --color-text-primary: #eee;
+}
+
 
 body {
   margin: 0;
   display: flex;
   place-items: center;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
 }
 #app {
   text-align: center;

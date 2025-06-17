@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-
+import DMmode from './DMmode.vue';
 
 interface TimeLeft {
   days: number;
@@ -43,27 +43,27 @@ onMounted(() => {
 });
 </script>
 <template>
-    <div class="flex items-center justify-center gap-4 p-6 ">
-      <div class="text-center">
-        <span class=" font-bold ">{{timeLeft.days + " : "}}</span>
-        <br />
-        дней
+    <div class="flex items-center backdrop-blur-lg fixed sm:relative sm:w-[400px] w-[100%] top-0 border h-[100px] sm:h-[100px] p-6">
+      <p class="w-[50%] text-xl">До нашей встречи</p>
+      <div class="flex w-[50%]">
+        <div class="text-center">
+        <span class=" text-xl font-bold">{{timeLeft.days + " : "}}</span>
+
+        </div>
+        <div class="text-center">
+          <span class=" text-xl font-bold">{{timeLeft.hours + " : "}}</span>
+
+        </div>
+        <div class="text-center">
+          <span class=" text-xl font-bold">{{timeLeft.minutes + " : "}}</span>
+
+        </div>
+        <div class="text-center">
+          <span class=" text-xl font-bold">{{timeLeft.seconds}}</span>
+
+        </div>
       </div>
-      <div class="text-center">
-        <span class=" font-bold ">{{timeLeft.hours + " : "}}</span>
-        <br />
-        часов
-      </div>
-      <div class="text-center">
-        <span class=" font-bold ">{{timeLeft.minutes + " : "}}</span>
-        <br />
-        минут
-      </div>
-      <div class="text-center">
-        <span class=" font-bold ">{{timeLeft.seconds}}</span>
-        <br />
-        секунд
-      </div>
+      <DMmode />
     </div>
 </template>
 <style>
