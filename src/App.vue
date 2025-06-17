@@ -16,8 +16,6 @@ const goInMap = () => {
       >
         Виктор 
         <br />
-        &
-        <br />
         Злата
       </h1>
       <div class="flex items-center gap-6 relative w-[80%] left-[10%] justify-center p-6 my-[10%]">
@@ -34,12 +32,6 @@ const goInMap = () => {
         <div class="my-[10%] text-2xl font-serif font-medium border-t border-white border-b  place-items-center ">
           <p>09:00</p>
         </div>
-      </div>
-      <div class="my-[10%]">
-        <h2>Дорогие гости</h2>
-        <p>
-          Сердца переполняются радостью, и мы хотим, чтобы вы стали частью нашего особенного дня! Приглашаем вас на нашу свадьбу!
-        </p>
       </div>
       <div class="my-[10%]">
         <h2>Адрес венчания</h2>
