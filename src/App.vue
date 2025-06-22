@@ -78,8 +78,13 @@ const goInTg = () => {
         </p>
         <p>* но, если у вас есть очень хорошая идея что подарить, что действительно пригодится в хозяйстве, и у нас этого точно нет</p>
       </div>
-      <footer class="m-[100px] my-[10%]">
-          <a class="hover:underline " href="https://t.me/swarmgost">->!!! По всем вопросам обращайтесь сюда !!!<-</a>
+      <footer class=" m-[100px] my-[10%]">
+        <div>
+          <a class=" mb-[20px] text-xl hover:underline" href="https://www.tinkoff.ru/rm/r_BwPbHVzgEU.CVpIUrVoDL/dGea497749">Если вдруг вам удобнее подарить подарок в виде денег, можно сделать это здесь  </a>
+        </div>
+        <div>
+          <a class=" mb-[20px] text-xl hover:underline" href="https://t.me/swarmgost">По всем вопросам обращайтесь сюда</a>
+        </div>
       </footer>
     </main>
 </template>
