@@ -76,7 +76,7 @@ export default defineComponent({
 <template>
     <header
     @click="toggleTheme"
-    class="z-100000 backdrop-blur-sm bg-white/30 flex fixed sm:relative sm:w-[400px] w-[100%] top-0 border h-[100px] sm:h-[100px] p-6">
+    class="z-100000 backdrop-blur-sm bg-white/30 flex fixed sm:relative  w-[100%] top-0 border h-[100px] sm:h-[100px] p-6">
       <p class="w-[50%] text-xl">До нашей встречи</p>
       <div class="flex w-[50%] ">
         <div class="text-center">

@@ -8,6 +8,9 @@ const goInMap = () => {
   window.location.href = "https://yandex.ru/maps/-/CHWoe84L";
 }
 
+const goInTg = () => {
+  window.location.href = 'https://t.me/myWebbing_bot'
+}
 
 
 
@@ -39,6 +42,11 @@ const goInMap = () => {
       </div>
       <div>
         <Galery />
+      </div>
+      <div class="my-[10%]">
+        <button @click="goInTg" class="border p-4 text-4xl rounded-[10px]">
+          Если хотите отправить фотографии, или пожелания, заходите сюда
+        </button>
       </div>
       <div class="my-[10%]">
         <h2>Адрес венчания</h2>
