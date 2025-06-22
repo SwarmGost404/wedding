@@ -1,8 +1,13 @@
 <script setup lang="ts">
+
 import Timer from './components/Timer.vue';
+
+import Galery from './components/Galery.vue';
+
 const goInMap = () => {
   window.location.href = "https://yandex.ru/maps/-/CHWoe84L";
 }
+
 
 
 
@@ -10,10 +15,9 @@ const goInMap = () => {
 
 <template>
   <Timer />
+
   <main class="w-[80%] mt-10%  ml-[10%] relative top-[155px] sm:top-[55px] ">
-      <h1
-        class=" my-[10%]"
-      >
+      <h1 class=" my-[10%]">
         Виктор 
         <br />
         Злата
@@ -32,6 +36,9 @@ const goInMap = () => {
         <div class="my-[10%] text-2xl font-serif font-medium border-t border-white border-b  place-items-center ">
           <p>09:00</p>
         </div>
+      </div>
+      <div>
+        <Galery />
       </div>
       <div class="my-[10%]">
         <h2>Адрес венчания</h2>

@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import { ref, onMounted } from 'vue'; 
+<script lang="ts">
+import { defineComponent, ref, onMounted } from 'vue';
 
 interface TimeLeft {
   days: number;
@@ -7,59 +7,70 @@ interface TimeLeft {
   minutes: number;
   seconds: number;
 }
-const isDark = ref(false);
-onMounted(() => {
-  const savedTheme = localStorage.getItem('theme');
-  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  isDark.value = savedTheme ? savedTheme === 'dark' : systemPrefersDark;
-  updateTheme();
-});
 
-const toggleTheme = () => {
-  isDark.value = !isDark.value;
-  updateTheme();
-};
-
-const updateTheme = () => {
-  if (isDark.value) {
-    document.documentElement.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-    localStorage.setItem('theme', 'light');
-  }
-};
-const targetDate = new Date('2025-07-20T12:00:00')
-const timeLeft = ref<TimeLeft>({
-  days: 0,
-  hours: 0,
-  minutes: 0,
-  seconds: 0,
-});
-
-const isActive = () => {
-  const interval = setInterval(() => {
-    const now = new Date();
-    const difference = targetDate.getTime() - now.getTime();
+export default defineComponent({
+  name: 'Timer',
+  setup() {
+    const isDark = ref(false);
     
-    if (difference <= 0) {
-      clearInterval(interval);
-      timeLeft.value = { days: 0, hours: 0, minutes: 0, seconds: 0 };
-      return;
-    }
+    const updateTheme = () => {
+      if (isDark.value) {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+    };
 
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    const toggleTheme = () => {
+      isDark.value = !isDark.value;
+      updateTheme();
+    };
 
-    timeLeft.value = { days, hours, minutes, seconds };
-  }, 1000);
-};
+    const targetDate = new Date('2025-07-20T12:00:00');
+    const timeLeft = ref<TimeLeft>({
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0
+    });
 
-onMounted(() => {
-  isActive();
+    const startCountdown = () => {
+      const interval = setInterval(() => {
+        const now = new Date();
+        const difference = targetDate.getTime() - now.getTime();
+        
+        if (difference <= 0) {
+          clearInterval(interval);
+          timeLeft.value = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+          return;
+        }
+
+        timeLeft.value = {
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((difference % (1000 * 60)) / 1000)
+        };
+      }, 1000);
+    };
+
+    onMounted(() => {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      isDark.value = savedTheme ? savedTheme === 'dark' : systemPrefersDark;
+      updateTheme();
+      
+      startCountdown();
+    });
+
+    return {
+      isDark,
+      toggleTheme,
+      timeLeft
+    };
+  }
 });
 </script>
 <template>
@@ -87,7 +98,7 @@ onMounted(() => {
       </div>
       <svg
         v-if="!isDark"
-        class="w-4 h-4"
+        class=" w-4 h-4"
         fill="currentColor"
         viewBox="0 0 20 20"
       >
@@ -95,7 +106,7 @@ onMounted(() => {
       </svg>
       <svg
         v-else
-        class="w-5 h-5 "
+        class=" w-5 h-5 "
         fill="currentColor"
         viewBox="0 0 20 20"
       >
@@ -104,5 +115,10 @@ onMounted(() => {
     </header>
 </template>
 <style>
-
+header:hover {
+  svg {
+    fill: #facc15;
+    filter: drop-shadow(0 0 8px #facc15);
+  }
+}
 </style>
