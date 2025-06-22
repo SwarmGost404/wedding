@@ -14,7 +14,7 @@ const loading = ref<boolean>(true)
 
 const fecthFoto = async () => {
     loading.value = true
-    const response = await axios.get("/foto.json")
+    const response = await axios.get("/fotoVictor.json")
     if (response.status !== 200) {
         loading.value = false;
         throw new Error("Error status code: " + response.status);
@@ -30,6 +30,7 @@ onMounted(() => {
 
 </script>
 <template>
+    <div class="text-4xl mb-[100px]">Галерея</div>
     <div v-if="loading">
         <span class=" font-bold text-2xl">loading...</span>
     </div>
@@ -43,6 +44,7 @@ onMounted(() => {
         :date="photo.date"
         />
     </div>
+    <!-- <div class="text-4xl mb-[100px]">Злата</div> -->
 </template>
 <style>
 

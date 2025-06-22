@@ -46,7 +46,7 @@ const goInMap = () => {
           <i>ул. Чайковского, 13Б, Петергоф</i>
         </p>
         <button 
-          class="my-[20px] text-4xl border-white  "
+          class="my-[20px] text-4xl border p-4 rounded-[10px] border-white transition-all duration-1000 hover:border-dashed "
           @click="goInMap"
         >
           Посмотреть на карте
@@ -60,10 +60,7 @@ const goInMap = () => {
           Чтобы сохранить стиль и атмосферу мероприятия, мы будем рады, если вы поддержите Русскую традицию, и придёте в народном костюме северной традиции
         </p>
       </div>
-      <div class="my-[10%]"> 
-        <h2>До нашей встречи</h2>
-        
-      </div>
+
       <div class="my-[10%]">
         <h2>
           Что дарить?
@@ -111,15 +108,7 @@ const goInMap = () => {
   }
 
 }
-button {
-  border: #fff 1px solid;
-  padding: 20px;
-  border-radius: 10px;
-  
-}
-button:hover {
-  
-  box-shadow: 10px 10px 10px #fff;
-}
+
+
 
 </style>
