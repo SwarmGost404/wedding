@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="relative w-64 h-80 bg-white p-4 shadow-lg rotate-[-2deg] hover:rotate-0 transition-transform duration-300 cursor-pointer"
+      class="relative w-64 h-80 bg-white p-4 shadow-lg rotate-[-2deg] hover:rotate-0 transition-transform duration-300 cursor-pointer rounded"
       @click="openModal"
       v-if="imageUrl!==null"
     >
@@ -28,7 +28,7 @@
           class="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center p-4"
           @click.self="closeModal"
         >
-          <div class="relative w-80 h-105 bg-white p-6 shadow-lg rotate-[-1deg]">
+          <div class="relative w-80 h-105 bg-white p-6 shadow-lg rotate-[-1deg] rounded">
             <!-- Угловой элемент как у поляроида -->
             <div class="absolute top-3 right-3 w-8 h-8 bg-white opacity-50 rotate-45"></div>
             
