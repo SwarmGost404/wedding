@@ -1,7 +1,5 @@
 <script setup lang="ts">
-
 import Timer from './components/Timer.vue';
-
 import Galery from './components/Galery.vue';
 
 const goInMap = () => {
@@ -12,6 +10,9 @@ const goInTg = () => {
   window.location.href = 'https://t.me/myWebbing_bot'
 }
 
+const goPay = () => {
+  window.location.href = "https://www.tinkoff.ru/rm/r_BwPbHVzgEU.CVpIUrVoDL/dGea497749"
+}
 
 
 </script>
@@ -26,17 +27,17 @@ const goInTg = () => {
         Злата
       </h1>
       <div class="flex items-center gap-6 relative w-[80%] left-[10%] justify-center p-6 my-[10%]">
-        <div class=" text-4xltext-2xl font-serif font-medium border-t border-black dark:border-white border-b  place-items-center ">
+        <div class=" text-4xltext-2xl font-serif font-medium border-t  border-b  place-items-center ">
           <p>Среда</p>
         </div>
         
-        <div class="flex flex-col items-center border-t border-black dark:border-white border-b my-[10%]">
+        <div class="flex flex-col items-center border-t  border-b my-[10%]">
           <p class="uppercase tracking-wider">Августа</p>
           <p class="font-bold  leading-none">6</p>
           <p>2025</p>
         </div>
         
-        <div class="my-[10%] text-2xl font-serif font-medium border-t border-black dark:border-white border-b  place-items-center ">
+        <div class="my-[10%] text-2xl font-serif font-medium border-t  border-b  place-items-center ">
           <p>09:00</p>
         </div>
       </div>
@@ -44,7 +45,7 @@ const goInTg = () => {
         <Galery />
       </div>
       <div class="my-[10%]">
-        <button @click="goInTg" class="border p-4 text-4xl rounded-[10px] ">
+        <button @click="goInTg" class="border p-4 text-4xl rounded-[10px] hover:underline ">
           Если хотите отправить фотографии, или пожелания, заходите сюда
         </button>
       </div>
@@ -54,7 +55,7 @@ const goInTg = () => {
           <i>ул. Чайковского, 13Б, Петергоф</i>
         </p>
         <button 
-          class="my-[20px] text-4xl border p-4 rounded-[10px] "
+          class="my-[20px] text-4xl border p-4 rounded-[10px] hover:underline "
           @click="goInMap"
         >
           Посмотреть на карте
@@ -78,7 +79,7 @@ const goInTg = () => {
         </p>
         <p>* но, если у вас есть очень хорошая идея что подарить, что действительно пригодится в хозяйстве, и у нас этого точно нет</p>
         <div class="w-full ">
-          <a class=" mb-[20px] text-2xl hover:underline" href="https://www.tinkoff.ru/rm/r_BwPbHVzgEU.CVpIUrVoDL/dGea497749">Если вдруг вам удобнее подарить подарок в виде денег, можно сделать это здесь  </a>
+          <button @click="goPay" class="my-[20px] text-4xl border p-4 rounded-[10px] hover:underline" >Если вдруг вам удобнее подарить подарок в виде денег, можно сделать это здесь  </button>
         </div>
       </div>
       <div class="hidden  justify-center w-full sm:grid">
