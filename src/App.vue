@@ -26,17 +26,17 @@ const goInTg = () => {
         Злата
       </h1>
       <div class="flex items-center gap-6 relative w-[80%] left-[10%] justify-center p-6 my-[10%]">
-        <div class=" text-4xltext-2xl font-serif font-medium border-t dark:border-black border-white border-b  place-items-center ">
+        <div class=" text-4xltext-2xl font-serif font-medium border-t border-black dark:border-white border-b  place-items-center ">
           <p>Среда</p>
         </div>
         
-        <div class="flex flex-col items-center border-t dark:border-black border-white border-b my-[10%]">
+        <div class="flex flex-col items-center border-t border-black dark:border-white border-b my-[10%]">
           <p class="uppercase tracking-wider">Августа</p>
           <p class="font-bold  leading-none">6</p>
           <p>2025</p>
         </div>
         
-        <div class="my-[10%] text-2xl font-serif font-medium border-t dark:border-black border-white border-b  place-items-center ">
+        <div class="my-[10%] text-2xl font-serif font-medium border-t border-black dark:border-white border-b  place-items-center ">
           <p>09:00</p>
         </div>
       </div>
@@ -44,7 +44,7 @@ const goInTg = () => {
         <Galery />
       </div>
       <div class="my-[10%]">
-        <button @click="goInTg" class="border p-4 text-4xl rounded-[10px] transition duration-[1000ms] ease-in-out transform hover:scale-110 ">
+        <button @click="goInTg" class="border p-4 text-4xl rounded-[10px] ">
           Если хотите отправить фотографии, или пожелания, заходите сюда
         </button>
       </div>
@@ -54,7 +54,7 @@ const goInTg = () => {
           <i>ул. Чайковского, 13Б, Петергоф</i>
         </p>
         <button 
-          class="my-[20px] text-4xl border p-4 rounded-[10px] border-black dark:border-white transition duration-[1000ms] ease-in-out transform hover:scale-110 "
+          class="my-[20px] text-4xl border p-4 rounded-[10px] "
           @click="goInMap"
         >
           Посмотреть на карте
@@ -86,6 +86,7 @@ const goInTg = () => {
       </div>
       <footer class=" w-full my-[100px]">
         <div class="w-full my-[100px]">
+          
         </div>
       </footer>
     </main>
