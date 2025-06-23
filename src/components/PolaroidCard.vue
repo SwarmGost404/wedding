@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="relative w-64 h-80 bg-white p-4 shadow-lg rotate-[-2deg] hover:rotate-0 transition-transform duration-300 cursor-pointer rounded"
+      class=" dark:border relative w-64 h-80 bg-white p-4 shadow-lg rotate-[-2deg] hover:rotate-0 transition-transform duration-300 cursor-pointer rounded"
       @click="openModal"
       v-if="imageUrl!==null"
     >

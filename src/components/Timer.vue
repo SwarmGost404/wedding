@@ -76,7 +76,7 @@ export default defineComponent({
 <template>
     <header
     @click="toggleTheme"
-    class="z-100000 backdrop-blur-sm bg-white/30 flex fixed sm:relative  w-[100%] top-0 border h-[100px] sm:h-[100px] p-6">
+    class="group z-100000 backdrop-blur-sm bg-white/30 flex fixed sm:relative  w-[100%] top-0 border h-[100px] sm:h-[100px] p-6">
       <p class="w-[50%] text-xl">До нашей встречи</p>
       <div class="flex w-[50%] ">
         <div class="text-center">
@@ -97,8 +97,8 @@ export default defineComponent({
         </div>
       </div>
       <svg
-        v-if="!isDark"
-        class=" w-4 h-4"
+        v-if="isDark"
+        class="hover:fill-yellow-400 hover:drop-shadow-[0_0_8px_#facc15] w-4 h-4 "
         fill="currentColor"
         viewBox="0 0 20 20"
       >
@@ -106,7 +106,7 @@ export default defineComponent({
       </svg>
       <svg
         v-else
-        class=" w-5 h-5 "
+        class=" hover:fill-black hover:drop-shadow-[0_0_8px_#000] w-5 h-5 "
         fill="currentColor"
         viewBox="0 0 20 20"
       >
@@ -115,10 +115,10 @@ export default defineComponent({
     </header>
 </template>
 <style>
-header:hover {
+/* header:hover {
   svg {
     fill: #facc15;
     filter: drop-shadow(0 0 8px #facc15);
   }
-}
+} */
 </style>
